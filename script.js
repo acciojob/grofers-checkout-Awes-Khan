@@ -9,8 +9,14 @@ const getSum = () => {
 		let val = row[i].children[1];
 		sum += Number(val.textContent);
 	}
+	const newRow = document.createElement("tr");
+	const td1 = document.createElement("td");
+	td1.value = "total price";
+	const td2 = document.createElement("td");
+	td2.value = sum;
+	newRow.appendChild(td1).appendChild(td2);
+	return newRow;
 //Add your code here
-	return sum;
   
 };
 
